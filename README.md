@@ -116,11 +116,17 @@ net.ipv6.conf.tap0.accept_ra = 0
 
 #### Clone the AWS and Project Repo to the A8 node:
 
-execute the setup.sh script.
+execute the setup.sh script to do it automatically for you.
 
 ```ruby
    chmod +x setup.sh
    ./setup.sh
+```
+now open another terminal and start the mqttsn-broker.
+
+```ruby
+   chmod +x setup_Broker.sh
+   ./setup_Broker.sh
 ```
 
 </details>
