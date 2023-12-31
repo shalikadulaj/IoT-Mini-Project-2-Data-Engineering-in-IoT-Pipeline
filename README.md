@@ -78,7 +78,7 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 
 Median filtering is a non-linear digital filtering technique, often used to remove noise from a signal or image. It is particularly effective at removing 'salt and pepper' type noise and can preserve edges while reducing random noise. The median filter works by sliding a window over the data, replacing each entry with the median of neighboring entries. The size of the window determines the extent of smoothing: a larger window leads to more smoothing.
 
-median filtering is applied in the context of IoT sensor data processing, specifically for handling outliers in temperature and pressure data. Here's how it works in your code:
+median filtering is applied in the context of IoT sensor data processing, specifically for handling outliers in temperature and pressure data. Here's how it works in our code:
 
 1. **Identification of Outliers**: our modal calculates the Z-score for each new temperature or pressure reading. If the absolute value of a Z-score is greater than 3, the reading is considered an outlier. This is based on the statistical rule of thumb that most (99.7%) data points should fall within three standard deviations from the mean in a normal distribution.
 
