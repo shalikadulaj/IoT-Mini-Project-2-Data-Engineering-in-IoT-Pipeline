@@ -207,11 +207,7 @@ Sign in with AWS SSO
 
 	Add Data Source > Select Amazon Timestream > Select default region (should be equal to Endpoint region) 
 
- We are using the “US East (N. Virginia) us-east-1” region.
-
-Add database, table, and measure. Then save.
-
-Now you are successfully connected to the data source. Then using Grafana, you can create a dashboard as you need. 
+ We are using the “US East (N. Virginia) us-east-1” region. Add database, table, and measure. Then save. Now you are successfully connected to the data source. Then using Grafana, you can create a dashboard as you need. 
 
 </details>
 
