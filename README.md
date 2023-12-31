@@ -28,8 +28,8 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 <div align="center">
 
+![IoT Flow chart](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/58818511/c954afc0-3e0f-41cb-86cd-79c819dcacd8)
 
-#### add flow chart
 
 </div>
 
