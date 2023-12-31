@@ -258,10 +258,10 @@ In the architecture designed for our data processing workflow, we leverage AWS L
 
 
 	- Select -Author from scratch
- - Add basic information -  (Function name-“LambdaFunction”)
- - Runtime - Python 3.12
- - Architecture x86_64
- - Click on the Create function
+	 - Add basic information -  (Function name-“LambdaFunction”)
+	 - Runtime - Python 3.12
+ 	- Architecture x86_64
+	 - Click on the Create function
 
 Now you have a function. Then need to link the trigger with the function. There are two options. You can use any option. The first one is, to click on add trigger button and select a source. You may select  AWS IoT as the source. Because this function receives sensor data through AWS IoT.
 The second one is,
