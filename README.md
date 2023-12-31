@@ -57,7 +57,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 #### logged in to FIT IOT-LAB and ssh to the Grenoble site.
 
-> Note: This is the second part of the project series. we strongly recommend you to follow Part One for better understanding.
+> Note: This is the second part of the project series. we strongly recommend you to follow [Part One](https://github.com/shalikadulaj/IoT-Mini-Project-1/blob/main/README.md) for better understanding.
   
 Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
 
