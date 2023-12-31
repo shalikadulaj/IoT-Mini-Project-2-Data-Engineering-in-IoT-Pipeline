@@ -507,7 +507,7 @@ The second one is,
 	- Click next and create
 
 
-Now you can start coding on [lambda_function.py].(https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/blob/main/lambda_function.py)     The data processing method in this Lambda function focuses on handling outliers in temperature and pressure data before storing it in DynamoDB. Using the Interquartile Range (IQR) method, the function identifies outliers, replacing values beyond calculated thresholds with the nearest threshold value. Based on your requirements you can add any kind of data processing algorithm here. This ensures that extreme data points do not skew the dataset. The function then constructs a DynamoDB database with both original and processed values for temperature and pressure, contributing to the overall robustness of the stored data.
+Now you can start coding on [lambda_function.py](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/blob/main/lambda_function.py).     The data processing method in this Lambda function focuses on handling outliers in temperature and pressure data before storing it in DynamoDB. Using the Interquartile Range (IQR) method, the function identifies outliers, replacing values beyond calculated thresholds with the nearest threshold value. Based on your requirements you can add any kind of data processing algorithm here. This ensures that extreme data points do not skew the dataset. The function then constructs a DynamoDB database with both original and processed values for temperature and pressure, contributing to the overall robustness of the stored data.
 
 
 
