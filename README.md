@@ -32,9 +32,6 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 #### add flow chart
 
 </div>
-Your code presents a comprehensive IoT data handling system, integrating MQTT for data communication and processing techniques for temperature and pressure data. Below is a report suitable for a GitHub `README.md`, describing key aspects of your code:
-
----
 
 # IoT Data Handling and Analysis System ( DEP Station )
 
@@ -187,7 +184,7 @@ if everything is working you should see a similar screen like below.
 
 </details>
 
-
+---
 
 ## Data Management and Visualization
 
