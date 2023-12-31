@@ -26,26 +26,15 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 ## Tools and Requirement
 
+* FIT IOT-LAB
+* AWS-IOT
+
 <div align="center">
 
 
 #### add flow chart
 
 </div>
-
-
- ## Sensing Layer
-
-
-
-
- ## Network Layer
-
-
-
-
-
-
 
 ## Getting Started
 
