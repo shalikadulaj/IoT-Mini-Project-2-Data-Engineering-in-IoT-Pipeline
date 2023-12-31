@@ -49,6 +49,24 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 ## Getting Started
 
+###( click the arrow to open guidelines for each step )
+
+<details>
+
+<summary> STEP 1. Setup RIOT OS environment </summary>
+
+#### logged in to FIT IOT-LAB and ssh to the Grenoble site.
+
+> Note: we recommend that you use Grenoble for this experiment as we are using A8-M3 nodes and there are plenty of boards available.
+  
+Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
+
+```ruby
+   ssh <username>@grenoble.iot-lab.info
+```
+
+
+
 ## Data Management and Visualization
 
 ## :cloud: AWS 
