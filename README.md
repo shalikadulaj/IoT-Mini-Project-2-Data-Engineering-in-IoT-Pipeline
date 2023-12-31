@@ -132,6 +132,7 @@ now start the mqttsn-broker.
 open another terminal and start the DEP station.
 
 ```ruby
+  cd DEP
   python3 main.py
 ```
 
