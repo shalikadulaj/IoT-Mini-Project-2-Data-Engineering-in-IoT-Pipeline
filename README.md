@@ -13,7 +13,7 @@
 
 
 
-## Data Engineering in IoT Pipeline
+# Data Engineering in IoT Pipeline
 
 ### Introduction
 
@@ -33,44 +33,44 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 </div>
 
-# IoT Data Handling and Analysis System ( DEP Station )
+## IoT Data Handling and Analysis System ( DEP Station )
 
-## Overview
+### Overview
 This Python script is designed for IoT applications, specifically for collecting, processing, and analyzing temperature and pressure data. It uses MQTT protocol for communication with IoT devices and implements outlier detection, data filtering, and predictive modeling.
 
-## Key Features
+### Key Features
 - **MQTT Communication**: Utilizes AWS IoT MQTT and MQTTSN for data transmission.
 - **Data Processing**: Implements outlier detection, linear regression for future data prediction, and median filtering.
 - **Threaded Execution**: Employs threading for simultaneous data processing tasks.
 - **Environmental Monitoring**: Focused on processing temperature and pressure data from IoT sensors.
 
-## Technologies Used
+### Technologies Used
 - Python
 - AWSIoTPythonSDK
 - numpy
 - threading
 - sklearn
 
-## Setup and Installation
+### Setup and Installation
 - Install Python dependencies: `sklearn`, `numpy`, `AWSIoTPythonSDK`.
 - Configure AWS IoT MQTT Client with the required certificates and endpoint.
 
-## Usage
+### Usage
 1. Configure MQTT client with appropriate credentials and endpoint.
 2. Subscribe to desired MQTT topics for receiving temperature and pressure data.
 3. The script processes incoming data, detecting outliers and predicting future values using linear regression.
 4. Processed data is published back to an MQTT topic.
 
-## Code Structure
+### Code Structure
 - **Data Collection**: The `Callback` class handles incoming MQTT messages and triggers data processing.
 - **Outlier Detection**: Implements Z-score calculation to identify outliers in temperature and pressure data.
 - **Data Processing Threads**: Separate threads for processing temperature and pressure data using linear regression.
 - **MQTT Configuration and Management**: Setup and manage MQTT and MQTTSN clients for data communication.
 - **Data Synchronization**: Uses threading locks for thread-safe operations on shared data.
 
-## Getting Started
+### Getting Started
 
-### ( click the arrow to open guidelines for each step )
+#### ( click the arrow to open guidelines for each step )
 
 <details>
 
