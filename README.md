@@ -57,7 +57,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 #### logged in to FIT IOT-LAB and ssh to the Grenoble site.
 
-> Note: we recommend that you use Grenoble for this experiment as we are using A8-M3 nodes and there are plenty of boards available.
+> Note: This is the second part of the project series. we strongly recommend you to follow Part One for better understanding.
   
 Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
 
