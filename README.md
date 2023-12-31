@@ -73,7 +73,7 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 ---
 <details>
 
-<summary> How Linear Regression Model Works in General </summary>
+<summary> Linear Regression Model  </summary>
  
 
 
