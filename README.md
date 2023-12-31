@@ -69,6 +69,36 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 - **MQTT Configuration and Management**: Setup and manage MQTT and MQTTSN clients for data communication.
 - **Data Synchronization**: Uses threading locks for thread-safe operations on shared data.
 
+
+---
+Linear regression is a statistical method used for modeling the relationship between a dependent variable and one or more independent variables. In the context of your code, the linear regression model is used for predictive analysis based on the historical data of temperature and pressure readings from IoT sensors. Here's how it works in your code:
+
+### How Linear Regression Model Works in General
+1. **Objective**: Linear regression aims to find a linear relationship between the independent variable(s) (predictors) and the dependent variable (outcome). It does this by fitting a linear equation to the observed data.
+
+2. **Linear Equation**: The equation of a simple linear regression is `y = a + bx + e`, where:
+   - `y` is the dependent variable (outcome).
+   - `x` is the independent variable (predictor).
+   - `a` is the y-intercept.
+   - `b` is the slope of the line.
+   - `e` is the error term.
+
+3. **Predictions**: Once the model parameters (`a` and `b`) are estimated from the training data, the model can make predictions for new, unseen data.
+
+### Implementation 
+In our script, linear regression is used separately for temperature and pressure data. Here's the breakdown:
+
+1. **Data Preparation**: The last 10 readings of temperature or pressure data are used as the dataset. These readings form the dependent variable `y`, and their corresponding indices (time points) are the independent variable `x`.
+
+2. **Model Training**: A linear regression model is created and trained using this data. The training process involves finding the best-fit line that minimizes the difference between the predicted values and the actual data points.
+
+3. **Prediction**: After training, the model predicts the next temperature or pressure value. This is achieved by inputting the next index (i.e., the length of the temperature or pressure data array) into the trained model to forecast the subsequent reading.
+
+4. **Usage of Predicted Data**: These predicted values are then used to update a shared data structure (`combined_data`), which appears to be subsequently published to an MQTT topic.
+
+This implementation allows your system to not only process and analyze current sensor data but also to forecast future readings. This can be particularly useful for proactive monitoring and decision-making in IoT applications.
+---
+
 ### Getting Started
 
 #### ( click the arrow to open guidelines for each step )
