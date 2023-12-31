@@ -73,7 +73,8 @@ Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-E
 
 <div align="center">
 
-![Screenshot 2023-12-31 at 11 33 51](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/54ae61a9-7eb1-476e-8358-44713a2e2f08)
+![Screenshot 2023-12-31 at 12 05 34](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/3c3f1b75-ad7f-4ed8-ae52-0b29d2dab3b1)
+
 
 </div>
 
