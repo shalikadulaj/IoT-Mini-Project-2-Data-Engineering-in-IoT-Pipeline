@@ -267,6 +267,7 @@ if everything is working you should see a similar screen like below.
 
 
 
+![31 12 2023_14 16 50_REC](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/58818511/a3cdbe98-efd8-4c7a-a4f8-fcebe6ca280f)
 
 
 
