@@ -70,7 +70,12 @@ Step 2:
 Step 3:
 ![Screenshot 2023-12-31 at 11 21 49](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/320612ba-2805-4a0b-a122-3092c5c5495f)
 Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline )
+
+<div align="center">
+
 ![Screenshot 2023-12-31 at 11 33 51](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/54ae61a9-7eb1-476e-8358-44713a2e2f08)
+
+</div>
 
 Now Open a Terminal from the front end and follow the below steps.
 
