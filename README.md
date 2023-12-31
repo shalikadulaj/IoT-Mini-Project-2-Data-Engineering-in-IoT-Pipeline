@@ -55,7 +55,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 [Amazon Web Services (AWS)](https://docs.aws.amazon.com/index.html ) is a leading cloud platform offering a comprehensive suite of services for data storage, visualization, and alerting. 
 
-### ( click the arrow to open guidelines for each step )
+### *( click the arrow to open guidelines for each step )*
 
 <details>
 
