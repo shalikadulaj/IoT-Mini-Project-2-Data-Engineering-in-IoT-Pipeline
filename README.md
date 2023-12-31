@@ -33,7 +33,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 </div>
 
-## IoT Data Handling and Analysis System ( DEP Station )
+## Advanced IoT Data Analysis Model ( DEP Unit )
 
 ### Overview
 
