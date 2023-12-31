@@ -63,13 +63,12 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 <summary> AWS IoT Core </summary>
 
-AWS IoT Core is a managed cloud service that facilitates secure communication between IoT devices and the AWS Cloud. It ensures encrypted connectivity, device management, and seamless integration with AWS services. With features like device shadows and a scalable architecture, it's ideal for building secure and scalable IoT applications. 
+AWS IoT Core is a managed cloud service that facilitates secure communication between IoT devices and the AWS Cloud. It ensures encrypted connectivity, device management, and seamless integration with AWS services. With features like device shadows and a scalable architecture, it's ideal for building secure and scalable IoT applications. According to the rule actions it sends data to amazon timestream table and  Lambda function.
 
 https://docs.aws.amazon.com/iot/ 
 
 
-The border router publishes sensor data from FIT IoT Lab to the specific topic in AWS IoT core. There are rules to control data, which receive to the IoT core.  
-
+The border router publishes sensor data from FIT IoT Lab to the specific topic in AWS IoT core. There are rules to control data, which receive to the IoT core.
 
 
 
@@ -80,7 +79,7 @@ The border router publishes sensor data from FIT IoT Lab to the specific topic i
 
 <summary>  Create a thing and Certificates </summary> 
 
-A thing resource is a digital representation of a physical device or logical entity in AWS IoT. Your device or entity needs a thing resource in the registry to use AWS IoT features such as Device Shadows, events, jobs, and device management features. 
+A thing resource is a digital representation of a physical device or logical entity in AWS IoT. Your device or entity needs a thing resource in the registry to use AWS IoT features such as Device Shadows, events, jobs, and device management features.
 
 Follow the below steps to create a thing 
 
@@ -96,7 +95,7 @@ Finally, you must download the device certificate, key files, and Root CA Certif
 
 
 
-Now need to add the End point to the code. You can get the Endpoint from the below path 
+Now you need to add the Endpoint to the code. You can get the Endpoint from the below path.
 
 	AWS IoT  > Settings > Device data endpoint 
 
@@ -107,7 +106,7 @@ Now need to add the End point to the code. You can get the Endpoint from the bel
 
 At this moment you can check whether the data is receiving. If not, you have to check the above steps again. To check follow the below steps. 
 
-	AWS IoT > Test > MQTT test client > Subscribe to a topic (sensor/station1) > Subscribe 
+	AWS IoT > Test > MQTT test client > Subscribe to a topic ("Grenoble/Data") > Subscribe 
 
 Replace the topic with your topic. Now you can see the data is receiving as below. 
 
@@ -127,20 +126,20 @@ Replace the topic with your topic. Now you can see the data is receiving as belo
 <details>
 <summary> AWS Timestream </summary> 
 
-AWS Timestream is a fully managed, serverless time-series database service provided by Amazon Web Services (AWS). It is specifically designed to handle time-series data at scale. Time-series data is characterized by data points associated with timestamps. In this project, the data from the IoT core is ingested into the AWS Timestream database using AWS rules. 
+AWS Timestream is a fully managed, serverless time-series database service provided by Amazon Web Services (AWS). It is specifically designed to handle time-series data at scale. Time-series data is characterized by data points associated with timestamps. In this project, the data from the IoT core is ingested into the AWS Timestream database using AWS rules.
 
 **Ingesting data into Timestream**
 
 Sample JSON data
 
 	{
-	"timestamp": "2023-12-24 00:22:21",
-	"site": "1",
-	"node": "3",
-	"temperature": "41",
+	    "temperature": 41.0,
+  	    "pressure": 983.0,
+ 	    "site": "Grenoble",
+  	    "timestamp": "2023-12-31 01:57:07"
 	}
 
-First, you need to add rules. Follow below steps to add rules 
+First, you need to add rules. Follow the below steps to add rules 
 
 	AWS IoT > Message Routing > Rules > Create rule 
 
@@ -149,23 +148,28 @@ First, you need to add rules. Follow below steps to add rules
 - Configure SQL statement 
 	- Write this quarry to select all the data coming from the topic, and ingest to the timestream. 
 
-			SELECT * FROM 'sensor/station1'   
+			SELECT * FROM 'Grenoble/Data'   
+
+			Note - in this project, data comes from three sites (Grenoble, Saclay, Paris). From the 'Grenoble/Data', 'Saclay/Data', and 'Paris/Data' topics we get processed data. As well as to visualize we get unprocessed data from each node ( there are 9 nodes). Use sensor/node1, sensor/node2, sensor/node3……… topics to get noisy data (before preprocessing). We use this noisy data only for visualizing purposes. We do not store this noisy data in the DynamoDB database.
+
 
 - Attach rule actions - This is the action when receiving data. 
 	- Select - “Timestream table (write message into a Timestream table)” 
 	- Add database - If you have not created a database, you can create a database by clicking on “Create Timetream database”. Select standard database. 
-	- Add Table – Click on create timestream table 
-	- Add a IAM role – Click on create new role 
+	- Add Table – Click on "create timestream table" 
+	- Add an "IAM role" – Click on create new role 
 
 - Review and create 
 </details>
 
+
 <details>
+
 
 <summary> AWS Managed Grafana </summary>
 
 
-AWS Managed Grafana is a fully managed and scalable service that simplifies the deployment, operation, and scaling of Grafana for analytics and monitoring. It integrates seamlessly with other AWS services, offering a user-friendly interface for creating dashboards and visualizations to gain insights from diverse data sources. We are using Grafana for visualizing data using AWS Timestream as a data source. 
+AWS Managed Grafana is a fully managed and scalable service that simplifies the deployment, operation, and scaling of Grafana for analytics and monitoring. It integrates seamlessly with other AWS services, offering a user-friendly interface for creating dashboards and visualizations to gain insights from diverse data sources. We are using Grafana for visualizing data using AWS Timestream as a data source.
 
 You can create the workspace as below 
 
@@ -173,7 +177,8 @@ You can create the workspace as below
 
 - Specify workspace details 
 	- Give a unique name 
-	- Select Grafana version – We are using 8.4  
+	- Select Grafana version – We are using Version 8.4
+  
 
  
 
@@ -189,14 +194,14 @@ You can create the workspace as below
 
 	Amazon Managed Grafana > All workspaces > Select workspace created above > Authentication > Assign new user or group > Select User > Action > Make admin 
 
-If you can't find a user, you have to add a user by below method 
+If you can't find a user, you have to add a user by the below method 
 
 	IAM Identity Center > Users >  Add user (giving email and other information) 
 
 After adding you can see the user under "configure users" in your workspace 
  
 
-Loging to Grafana workspace 
+Login to Grafana workspace 
 
 	Amazon Managed Grafana > All workspaces > Select workspace created above >  Click on “Grafana workspace URL” 
 
@@ -204,50 +209,18 @@ Sign in with AWS SSO
 
 	Add Data Source > Select Amazon Timestream > Select default region (should be equal to Endpoint region) 
 
-Add data base, table and measure. Then save.
+ We are using the “US East (N. Virginia) us-east-1” region.
 
-Now you are successfully connected the data source. Then using Grafana, you can create a dashboard as you need. 
+Add database, table, and measure. Then save.
 
-</details>
-
-<details>
-
-<summary> AWS SNS </summary>
-
-
-Amazon Simple Notification Service (SNS) is a fully managed messaging service by AWS. It enables the publishing of messages to a variety of endpoints, including mobile devices, email, and more. SNS simplifies the creation and management of message-driven applications, providing flexibility and scalability for diverse communication scenarios. In here rules are set for triggering email alerts using AWS SNS service. To set rules follow below steps. 
-
-	AWS IoT > Message Routing > Rules > Create rule 
-
-- Specify rule properties 
-
-- Configure SQL statement 
-	- Write this quarry to select  data once the temperature value is greater than 50. And data will be sent to the topic.  
-
-
-			SELECT *,timestamp() as ts FROM 'sensor/station1' WHERE temperature > 50 
-
-- Attach rule actions - This is the action when receiving data. 
-	- Select - “Simple Notification Service (SNS)” 
-	- Add SNS topic – Create SNS topic 
-	- Add a IAM role – Click on create new role 
-
-- Review and create 
-
-**Create a subscription**
-
-	Amazon SNS > Topics > Select notification which you create above > Create subscription 
-
-- Select protocol as “Email”. If you need to send any notification, you select any other option. 
-	- Add Endpoint – email address  
-	- Create Subscription 
-
-- Login to email and confirm the subscription 
- 
-
-Here rules are set for triggering email alerts using the AWS SNS service. Write SQL quarries to trigger AWS SNS 
+Now you are successfully connected to the data source. Then using Grafana, you can create a dashboard as you need. 
 
 </details>
+
+
+
+
+
 
 
 <details>
@@ -255,20 +228,90 @@ Here rules are set for triggering email alerts using the AWS SNS service. Write 
 
 
 
-AWS DynamoDB, a fully managed NoSQL database, we are using this for storing alert data. With seamless scalability and low-latency access, DynamoDB ensures reliable and fast retrieval of alert information. Its flexible schema accommodates evolving data needs, making it a robust solution for storing and retrieving dynamic alert data. 
+AWS DynamoDB, a fully managed NoSQL database, it is used for storing all the processed data. With seamless scalability and low-latency access, DynamoDB ensures reliable and fast retrieval of alert information. Its flexible schema accommodates evolving data needs, making it a robust solution for storing and retrieving dynamic data.
 
-**Create rule for ingesting alert data into dynamoDB**
 
-	AWS IoT > Message Routing > Rules > Select rule which you create above (for sending email) > Edit
-- Add another rule action  
-	- Choose an action - “DyanamoDBv2 (Split message into multiple colums of a DynamoDB table” 
-	- Add table – Click on “Create DynamoDB table” 
-	- Add a IAM role – Click on “create new role” 
+**To create a DynamoDB database follow the below steps**
+
+	
+- Search DynamoDB in the AWS console
+  
+  		tables> Create table
+ 
+	- Provide table details (table name, partition key) 
+	- create a table with default settings. 
+	
+When you are writing the code for the lambda function, this table name will be required.
 
 </details>
 
 
 
+<details>
+
+<summary> AWS Lambda </summary>
+
+AWS Lambda is a serverless computing service provided by Amazon Web Services (AWS). It allows developers to run code without the need to provision or manage servers. This serverless architecture enables developers to focus solely on writing code to meet business requirements, without worrying about the underlying infrastructure.
+
+In the architecture designed for our data processing workflow, we leverage AWS Lambda to seamlessly transmit data to DynamoDB. Before storing this data in the DynamoDB database, a crucial step is introduced within the Lambda function itself to address potential noise or missing values. While initial data preprocessing is performed in the node, noise can be generated during transmission. To mitigate this, the Lambda function incorporates a dedicated data preprocessing stage just before the data is committed to the database. This ensures that any discrepancies or inconsistencies in the incoming data are systematically rectified. The preprocessing logic, housed within the Lambda function, allows us to tailor the data precisely before persisting it in DynamoDB. This approach not only fortifies the integrity of the stored information but also streamlines the entire data-handling process within the serverless architecture.
+
+
+**To create a lambda function follow the below steps
+
+- Search AWS lambda in aws console
+
+		Dashboard > Create function 
+
+
+	- Select -Author from scratch
+        - Add basic information -  (Function name-“LambdaFunction”)
+        - Runtime - Python 3.12
+        - Architecture x86_64
+        - Click on the Create function
+
+Now you have a function. Then need to link the trigger with the function. There are two options. You can use any option. The first one is, to click on add trigger button and select a source. You may select  AWS IoT as the source. Because this function receives sensor data through AWS IoT.
+The second one is,
+
+	AWS IoT > Message Routing > Rules > Create rule 
+
+- Specify rule properties
+- Configure SQL statement
+	- Write this quarry to select all the data coming from the topic, and ingest to the lambda function.
+
+			SELECT * FROM 'Grenoble/Data'   
+
+
+			Note - in this project, data comes from three sites (Grenoble, Saclay, Paris).
+
+
+
+- Attach rule actions - This is the action when receiving data.
+
+	- Select - “Lambda (send a message to a Lambda function)”
+	- Lambda function - select the function that you created in the above step (“LambdaFunction”) 
+	- Click next and create
+
+
+Now you can start coding on lambda_function.py. The data processing method in this Lambda function focuses on handling outliers in temperature and pressure data before storing it in DynamoDB. Using the Interquartile Range (IQR) method, the function identifies outliers, replacing values beyond calculated thresholds with the nearest threshold value. Based on your requirements you can add any kind of data processing algorithm here. This ensures that extreme data points do not skew the dataset. The function then constructs a DynamoDB database with both original and processed values for temperature and pressure, contributing to the overall robustness of the stored data.
+
+
+
+When you run this code you will get a permission error. To solve it follow the below steps.
+
+
+	IAM > Click on Roles > create role > AWS service >choose service as DynamoDB > Next > Add “AmazonDynamoDBFullAccess” policy > next > give role name > click on create role
+
+
+
+Then go back to the lambda,
+
+		Configuration > permission > Edit Execution role > Select the role just created > save
+
+Now all the data received from each topic will be processed and stored in DynamoDB.
+
+   
+
+</details>
 
 
 
