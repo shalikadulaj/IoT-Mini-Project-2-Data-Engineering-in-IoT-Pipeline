@@ -148,7 +148,7 @@ First, you need to add rules. Follow the below steps to add rules
 
 			SELECT * FROM 'Grenoble/Data'   
 
-Note - in this project, data comes from three sites (Grenoble, Saclay, Paris). From the 'Grenoble/Data', 'Saclay/Data', and 'Paris/Data' topics we get processed data. As well as to visualize we get unprocessed data from each node ( there are 9 nodes). Use sensor/node1, sensor/node2, sensor/node3……… topics to get noisy data (before preprocessing). We use this noisy data only for visualizing purposes. We do not store this noisy data in the DynamoDB database.
+Note - In this project, data comes from three sites (Grenoble, Saclay, Paris). We get the processed data from the 'Grenoble/Data', 'Saclay/Data', and 'Paris/Data' topics . And we get unprocessed data from each node (there are 9 nodes). Use sensor/node1, sensor/node2, sensor/node3 ... etc, topics to get noisy data (before preprocessing). We use this noisy data only for visualizing purposes. We do not store this noisy data in the DynamoDB database.
 
 
 - Attach rule actions - This is the action when receiving data. 
