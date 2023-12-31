@@ -63,7 +63,7 @@ Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the use
 
 submit an experiment
 
-step 1:
+Step 1:
 ![Screenshot 2023-12-31 at 11 19 34](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/87616d1e-95be-46c3-8290-47290aef46ca)
 Step 2:
 ![Screenshot 2023-12-31 at 11 20 45](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/d3af4678-7c8f-4730-b1f4-15e7b6b7936d)
@@ -98,7 +98,7 @@ net.ipv6.conf.tap0.accept_ra = 0
 
 </details>
 
-<details>
+
 
 
 ## Data Management and Visualization
