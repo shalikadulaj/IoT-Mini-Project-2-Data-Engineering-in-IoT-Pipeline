@@ -108,6 +108,8 @@ In our script, linear regression is used separately for temperature and pressure
 This implementation allows the system to not only process and analyze current sensor data but also to forecast future readings. This can be particularly useful for proactive monitoring and decision-making in IoT applications.
 
 </details>
+
+
 ---
 
 ### Getting Started
