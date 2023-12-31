@@ -28,7 +28,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 <div align="center">
 
-![IoT Flow chart](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/58818511/c954afc0-3e0f-41cb-86cd-79c819dcacd8)
+![IoT Flow chart (1)](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/58818511/c1fcfc1f-c70d-4148-a688-04eb56665910)
 
 
 </div>
@@ -261,6 +261,15 @@ if everything is working you should see a similar screen like below.
 ---
 
 ## Data Management and Visualization
+
+
+
+
+
+
+
+
+
 
 ## :cloud: AWS 
 
