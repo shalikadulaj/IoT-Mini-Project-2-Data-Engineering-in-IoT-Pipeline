@@ -123,11 +123,16 @@ execute the setup.sh script to do it automatically for you.
    chmod +x setup.sh
    ./setup.sh
 ```
-now open another terminal and start the mqttsn-broker.
+now start the mqttsn-broker.
 
 ```ruby
    chmod +x setup_Broker.sh
    ./setup_Broker.sh
+```
+open another terminal and start the DEP station.
+
+```ruby
+  python3 main.py
 ```
 
 </details>
