@@ -110,7 +110,7 @@ Open the other Sensor Nodes shell in a different terminals from frontend and che
 ```
 if all nodes have global ipv6 propagated from the border router, you can start the stations. 
 
-> Note: before starting you need to start the broker.
+> Note: before starting you need to start the broker. see Step 2.
 
 ```ruby
  >start 2001:660:5307:3000::67 1885 1 
