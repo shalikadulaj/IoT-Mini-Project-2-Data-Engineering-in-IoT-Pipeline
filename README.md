@@ -99,8 +99,6 @@ Now you need to add the Endpoint to the code. You can get the Endpoint from the 
 
 	AWS IoT  > Settings > Device data endpoint 
 
-[Go back to step 8](#aftercreate)
-
 
 
 
