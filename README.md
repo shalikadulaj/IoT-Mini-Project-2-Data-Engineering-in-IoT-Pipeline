@@ -61,10 +61,40 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
   
 Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
 
+submit an experiment
+
+![Screenshot 2023-12-31 at 11 19 34](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/87616d1e-95be-46c3-8290-47290aef46ca)
+![Screenshot 2023-12-31 at 11 20 45](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/d3af4678-7c8f-4730-b1f4-15e7b6b7936d)
+![Screenshot 2023-12-31 at 11 21 49](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/320612ba-2805-4a0b-a122-3092c5c5495f)
+![Screenshot 2023-12-31 at 11 33 51](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/54ae61a9-7eb1-476e-8358-44713a2e2f08)
+
+
+
 ```ruby
    ssh <username>@grenoble.iot-lab.info
 ```
+Now you can configure the network of the border router on m3-1 and propagate an IPv6 prefix with ethos_uhcpd.py
 
+```ruby
+username@grenoble:~$ sudo ethos_uhcpd.py m3-1 tap0 2001:660:5307:3100::1/64
+```
+The network is finally configured and you will see a similar response below:
+
+```ruby
+net.ipv6.conf.tap0.forwarding = 1
+net.ipv6.conf.tap0.accept_ra = 0
+----> ethos: sending hello.
+----> ethos: activating serial pass-through.
+----> ethos: hello reply received
+```
+> Note 1: leave the terminal open (you don’t want to kill ethos_uhcpd.py, it bridges the BR to the front-end network)
+
+> Note 2: If you have an error “Invalid prefix – Network overlapping with routes”, it’s because another experiment is using the same ipv6 prefix
+> (e.g. 2001:660:5307:3100::1/64).
+
+</details>
+
+<details>
 
 
 ## Data Management and Visualization
