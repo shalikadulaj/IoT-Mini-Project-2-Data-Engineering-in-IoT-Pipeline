@@ -36,7 +36,8 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 ## IoT Data Handling and Analysis System ( DEP Station )
 
 ### Overview
-This Python script is designed for IoT applications, specifically for collecting, processing, and analyzing temperature and pressure data. It uses MQTT protocol for communication with IoT devices and implements outlier detection, data filtering, and predictive modeling.
+
+We have developed a sophisticated model for IoT data analysis, primarily focusing on temperature and pressure data received from an IOT device's remote destinations. This model is an integration of advanced data processing techniques and machine learning, specifically designed to enhance the capabilities of IoT systems in environmental monitoring.
 
 ### Key Features
 - **MQTT Communication**: Utilizes AWS IoT MQTT and MQTTSN for data transmission.
