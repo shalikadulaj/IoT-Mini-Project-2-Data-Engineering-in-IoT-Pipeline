@@ -114,7 +114,8 @@ Replace the topic with your topic. Now you can see the data is receiving as belo
 <div align="center">
 
 
-![5](https://github.com/shalikadulaj/IoT-Mini-Project-1/assets/58818511/edc49f9e-cd09-487c-ad08-107e6074c859)
+![31 12 2023_08 48 05_REC](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/58818511/fb8435d7-c632-4592-b097-862b01c65956)
+
 
 </div>
 </details>
