@@ -77,18 +77,22 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
  
 
 
-Linear regression is a statistical method used for modeling the relationship between a dependent variable and one or more independent variables. In the context of your code, the linear regression model is used for predictive analysis based on the historical data of temperature and pressure readings from IoT sensors. Here's how it works in your code:
+Linear regression is a statistical method used for modeling the relationship between a dependent variable and one or more independent variables. In the context of our code, the linear regression model is used for predictive analysis based on the historical data of temperature and pressure readings from IoT sensors. 
 
-1. **Objective**: Linear regression aims to find a linear relationship between the independent variable(s) (predictors) and the dependent variable (outcome). It does this by fitting a linear equation to the observed data.
+Here's how it works:
 
-2. **Linear Equation**: The equation of a simple linear regression is `y = a + bx + e`, where:
+1. **Objective**:
+
+Linear regression aims to find a linear relationship between the independent variable(s) (predictors) and the dependent variable (outcome). It does this by fitting a linear equation to the observed data.
+
+3. **Linear Equation**: The equation of a simple linear regression is `y = a + bx + e`, where:
    - `y` is the dependent variable (outcome).
    - `x` is the independent variable (predictor).
    - `a` is the y-intercept.
    - `b` is the slope of the line.
    - `e` is the error term.
 
-3. **Predictions**: Once the model parameters (`a` and `b`) are estimated from the training data, the model can make predictions for new, unseen data.
+4. **Predictions**: Once the model parameters (`a` and `b`) are estimated from the training data, the model can make predictions for new, unseen data.
 
 ### Implementation 
 In our script, linear regression is used separately for temperature and pressure data. Here's the breakdown:
@@ -101,7 +105,7 @@ In our script, linear regression is used separately for temperature and pressure
 
 4. **Usage of Predicted Data**: These predicted values are then used to update a shared data structure (`combined_data`), which appears to be subsequently published to an MQTT topic.
 
-This implementation allows your system to not only process and analyze current sensor data but also to forecast future readings. This can be particularly useful for proactive monitoring and decision-making in IoT applications.
+This implementation allows the system to not only process and analyze current sensor data but also to forecast future readings. This can be particularly useful for proactive monitoring and decision-making in IoT applications.
 
 </details>
 ---
