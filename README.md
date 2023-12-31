@@ -105,8 +105,6 @@ net.ipv6.conf.tap0.accept_ra = 0
 
 Open the other Sensor Nodes shell in a different terminals from frontend and check the Global IPV6 prefix is obtained from the border router subnet using help -> ifconfig
 
-In this case it is - inet6 addr: 2001:660:5307:3100:b8d0:5b74:8db9:353f  scope: global  VAL
-
 ```ruby
  username@grenoble:~/RIOT$ nc m3-2 20000
 ```
