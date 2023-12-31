@@ -103,6 +103,27 @@ net.ipv6.conf.tap0.accept_ra = 0
 > Note 2: If you have an error “Invalid prefix – Network overlapping with routes”, it’s because another experiment is using the same ipv6 prefix
 > (e.g. 2001:660:5307:3100::1/64).
 
+Open the other Sensor Nodes shell in a different terminals from frontend and check the Global IPV6 prefix is obtained from the border router subnet using help -> ifconfig
+
+In this case it is - inet6 addr: 2001:660:5307:3100:b8d0:5b74:8db9:353f  scope: global  VAL
+
+```ruby
+ username@grenoble:~/RIOT$ nc m3-2 20000
+```
+if all nodes have global ipv6 propagated from the border router, you can start the stations. 
+
+> Note: before starting you need to start the broker.
+
+```ruby
+ >start 2001:660:5307:3000::67 1885 1 
+```
+```ruby
+ >start 2001:660:5307:3000::67 1885 2 
+```
+```ruby
+ >start 2001:660:5307:3000::67 1885 3 
+```
+
 </details>
 <details>
 
