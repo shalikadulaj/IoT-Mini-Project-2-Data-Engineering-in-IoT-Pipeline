@@ -4,8 +4,8 @@
 
 ### Group Members
 
-* Shalika Dulaj Amarathunga
-* Kavinda Rathnayaka
+* *Shalika Dulaj Amarathunga*
+* *Kavinda Rathnayaka*
 
 ##  Video Demonstration
 
