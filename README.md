@@ -72,6 +72,8 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 
 
 ---
+In summary, our modal takes raw sensor data, cleanses it through outlier detection and handling, and then uses the cleaned data to train a linear regression model for predicting future values. This process enhances the reliability of the data used for predictions and ensures that the model's outputs are based on accurate and representative information.
+---
 <details>
 
 <summary> Outliers/Anomalies handling with  Median Filtering, Zscore method and Impution  </summary>
