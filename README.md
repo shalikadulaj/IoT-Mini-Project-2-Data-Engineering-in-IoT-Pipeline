@@ -59,7 +59,7 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 ### Usage
 1. Configure MQTT client with appropriate credentials and endpoint.
 2. Subscribe to desired MQTT topics for receiving temperature and pressure data.
-3. The script processes incoming data, detecting outliers and predicting future values using [linear regression](https://www.mathworks.com/help/stats/what-is-linear-regression.html).
+3. The script processes incoming data, detecting outliers ( [Zscore](https://www.machinelearningplus.com/machine-learning/how-to-detect-outliers-with-z-score/) ) and predicting future values using [linear regression](https://www.mathworks.com/help/stats/what-is-linear-regression.html).
 4. Processed data is published back to an MQTT topic.
 
 ### Code Structure
