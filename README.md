@@ -81,19 +81,20 @@ Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-E
 
 <summary> STEP 2. Start DEP station and communication with aws-iot </summary>
 
-#### 
-
-> Note: we recommend that you use Grenoble for this experiment as we are using A8-M3 nodes and there are plenty of boards available.
-  
-Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
+####  In another terminal, log on to the A8 node, node-a8-1. We are going to configure and start the MQTT-SN broker as follows:
 
 ```ruby
-   ssh <username>@grenoble.iot-lab.info
+   my_computer$ ssh <login>@grenoble.iot-lab.info
+  login@grenoble:~$ ssh root@node-a8-1
 ```
-#### Clone the RIOT OS repository from GitHub:
+
+#### Clone the AWS and Project Repo to the A8 node:
+
+execute the setup.sh script.
 
 ```ruby
-   username@grenoble:~$ git clone https://github.com/RIOT-OS/RIOT.git
+   chmod +x setup.sh
+   ./setup.sh
 ```
 
 </details>
