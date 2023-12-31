@@ -53,7 +53,7 @@ The data engineering pipeline encompasses crucial stages, beginning with data pr
 
 <details>
 
-<summary> STEP 1:Setup FIT IOT-LAB Testbed and Configure The Network environment </summary>
+<summary> STEP 1: Setup FIT IOT-LAB Testbed and Configure The Network environment </summary>
 
 #### logged in to FIT IOT-LAB and ssh to the Grenoble site.
 
@@ -63,11 +63,11 @@ Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the use
 
 submit an experiment
 
-Step 1:
+Step 1: logged in
 ![Screenshot 2023-12-31 at 11 19 34](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/87616d1e-95be-46c3-8290-47290aef46ca)
-Step 2:
+Step 2: Select nodes
 ![Screenshot 2023-12-31 at 11 20 45](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/d3af4678-7c8f-4730-b1f4-15e7b6b7936d)
-Step 3:
+Step 3: Open the experiment
 ![Screenshot 2023-12-31 at 11 21 49](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/320612ba-2805-4a0b-a122-3092c5c5495f)
 Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline )
 
