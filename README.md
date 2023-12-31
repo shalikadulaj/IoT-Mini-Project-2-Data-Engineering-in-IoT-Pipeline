@@ -157,7 +157,8 @@ open another terminal and start the DEP station.
 if everything is working you should see a similar screen like below.
 
 
-![Screenshot 2023-12-31 at 12 21 03](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/a38851b1-ac36-447a-a633-ceab27643cee)
+![Screenshot 2023-12-31 at 12 21 03](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/51f4aeb1-3a3b-4671-9820-5170c57f1925)
+
 
 
 </details>
