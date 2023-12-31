@@ -531,10 +531,5 @@ Now all the data received from each topic will be processed and stored in Dynamo
 ## Contributing
 Contributions to enhance the script, add new features, or improve the data processing algorithms are welcome.
 
-## License
-[Specify License Here]
-
-## Acknowledgments
-- [Any relevant acknowledgments]
 
 
