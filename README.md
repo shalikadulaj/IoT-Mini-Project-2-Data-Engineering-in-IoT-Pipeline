@@ -55,6 +55,7 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 ### Setup and Installation
 - Install Python dependencies: `sklearn`, `numpy`, `AWSIoTPythonSDK`.
 - Configure AWS IoT MQTT Client with the required certificates and endpoint.
+  > See gudied steps in "Getting Started Section"
 
 ### Usage
 1. Configure MQTT client with appropriate credentials and endpoint.
