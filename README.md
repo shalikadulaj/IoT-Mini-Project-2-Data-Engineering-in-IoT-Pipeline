@@ -77,27 +77,6 @@ Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-E
 
 </div>
 
-<details>
-
-<summary> STEP 2. Start DEP station and communication with aws-iot </summary>
-
-####  In another terminal, log on to the A8 node, node-a8-1. We are going to configure and start the MQTT-SN broker as follows:
-
-```ruby
-   my_computer$ ssh <login>@grenoble.iot-lab.info
-  login@grenoble:~$ ssh root@node-a8-1
-```
-
-#### Clone the AWS and Project Repo to the A8 node:
-
-execute the setup.sh script.
-
-```ruby
-   chmod +x setup.sh
-   ./setup.sh
-```
-
-</details>
 
 Now Open a Terminal from the front end and follow the below steps.
 
@@ -124,7 +103,27 @@ net.ipv6.conf.tap0.accept_ra = 0
 > (e.g. 2001:660:5307:3100::1/64).
 
 </details>
+<details>
 
+<summary> STEP 2. Start DEP station and communication with aws-iot </summary>
+
+####  In another terminal, log on to the A8 node, node-a8-1. We are going to configure and start the MQTT-SN broker as follows:
+
+```ruby
+   my_computer$ ssh <login>@grenoble.iot-lab.info
+  login@grenoble:~$ ssh root@node-a8-1
+```
+
+#### Clone the AWS and Project Repo to the A8 node:
+
+execute the setup.sh script.
+
+```ruby
+   chmod +x setup.sh
+   ./setup.sh
+```
+
+</details>
 
 
 
