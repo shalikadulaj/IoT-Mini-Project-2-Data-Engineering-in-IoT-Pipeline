@@ -77,6 +77,27 @@ Step 4: Browse the clone directory on your local PC. ( IoT-Mini-Project-2-Data-E
 
 </div>
 
+<details>
+
+<summary> STEP 2. Start DEP station and communication with aws-iot </summary>
+
+#### 
+
+> Note: we recommend that you use Grenoble for this experiment as we are using A8-M3 nodes and there are plenty of boards available.
+  
+Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by using the username you created when you registered with the testbed:
+
+```ruby
+   ssh <username>@grenoble.iot-lab.info
+```
+#### Clone the RIOT OS repository from GitHub:
+
+```ruby
+   username@grenoble:~$ git clone https://github.com/RIOT-OS/RIOT.git
+```
+
+</details>
+
 Now Open a Terminal from the front end and follow the below steps.
 
 ```ruby
