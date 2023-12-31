@@ -148,7 +148,7 @@ First, you need to add rules. Follow the below steps to add rules
 
 			SELECT * FROM 'Grenoble/Data'   
 
-Note - In this project, data comes from three sites (Grenoble, Saclay, Paris). We get the processed data from the 'Grenoble/Data', 'Saclay/Data', and 'Paris/Data' topics . And we get unprocessed data from each node (there are 9 nodes). Use sensor/node1, sensor/node2, sensor/node3 ... etc, topics to get noisy data (before preprocessing). We use this noisy data only for visualizing purposes. We do not store this noisy data in the DynamoDB database.
+*Note - In this project, data comes from three sites (Grenoble, Saclay, Paris). We get the processed data from the 'Grenoble/Data', 'Saclay/Data', and 'Paris/Data' topics . And we get unprocessed data from each node (there are 9 nodes). Use sensor/node1, sensor/node2, sensor/node3 ... etc, topics to get noisy data (before preprocessing). We use this noisy data only for visualizing purposes. We do not store this noisy data in the DynamoDB database.*
 
 
 - Attach rule actions - This is the action when receiving data. 
@@ -250,7 +250,7 @@ AWS Lambda is a serverless computing service provided by Amazon Web Services (AW
 In the architecture designed for our data processing workflow, we leverage AWS Lambda to seamlessly transmit data to DynamoDB. Before storing this data in the DynamoDB database, a crucial step is introduced within the Lambda function itself to address potential noise or missing values. While initial data preprocessing is performed in the node, noise can be generated during transmission. To mitigate this, the Lambda function incorporates a dedicated data preprocessing stage just before the data is committed to the database. This ensures that any discrepancies or inconsistencies in the incoming data are systematically rectified. The preprocessing logic, housed within the Lambda function, allows us to tailor the data precisely before persisting it in DynamoDB. This approach not only fortifies the integrity of the stored information but also streamlines the entire data-handling process within the serverless architecture.
 
 
-**To create a lambda function follow the below steps*
+**To create a lambda function follow the below steps**
 
 - Search AWS lambda in aws console
 
@@ -275,7 +275,7 @@ The second one is,
 			SELECT * FROM 'Grenoble/Data'   
 
 
-Note - in this project, data comes from three sites (Grenoble, Saclay, Paris).
+*Note - in this project, data comes from three sites (Grenoble, Saclay, Paris).*
 
 
 
