@@ -243,7 +243,7 @@ When you are writing the code for the lambda function, this table name will be r
 
 <details>
 
-<summary> AWS Lambda </summary>
+<summary> AWS Lambda - Cloud Data Preprocessing </summary>
 
 AWS Lambda is a serverless computing service provided by Amazon Web Services (AWS). It allows developers to run code without the need to provision or manage servers. This serverless architecture enables developers to focus solely on writing code to meet business requirements, without worrying about the underlying infrastructure.
 
