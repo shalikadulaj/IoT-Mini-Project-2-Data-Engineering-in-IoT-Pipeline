@@ -218,7 +218,7 @@ Sign in with AWS SSO
 
 
 <details>
-<summary> AWS Dynamodb </summary>
+<summary> AWS DynamoDB </summary>
 
 
 
