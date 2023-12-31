@@ -76,7 +76,7 @@ In summary, our modal takes raw sensor data, cleanses it through outlier detecti
 ---
 <details>
 
-<summary> Outliers/Anomalies handling with  Median Filtering, Zscore method and Impution  </summary>
+<summary> Outliers/Anomalies handling with  Median Filtering, Zscore method and Imputation  </summary>
 
 Median filtering is a non-linear digital filtering technique, often used to remove noise from a signal or image. It is particularly effective at removing 'salt and pepper' type noise and can preserve edges while reducing random noise. The median filter works by sliding a window over the data, replacing each entry with the median of neighboring entries. The size of the window determines the extent of smoothing: a larger window leads to more smoothing.
 
