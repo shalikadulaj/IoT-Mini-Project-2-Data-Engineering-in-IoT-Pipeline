@@ -73,6 +73,31 @@ We have developed a sophisticated model for IoT data analysis, primarily focusin
 ---
 <details>
 
+<summary> Outliers/Anomalies handling with  Median Filtering, Zscore method and Impution  </summary>
+
+Median filtering is a non-linear digital filtering technique, often used to remove noise from a signal or image. It is particularly effective at removing 'salt and pepper' type noise and can preserve edges while reducing random noise. The median filter works by sliding a window over the data, replacing each entry with the median of neighboring entries. The size of the window determines the extent of smoothing: a larger window leads to more smoothing.
+
+In your our, median filtering is applied in the context of IoT sensor data processing, specifically for handling outliers in temperature and pressure data. Here's how it works in your code:
+
+1. **Identification of Outliers**: our modal calculates the Z-score for each new temperature or pressure reading. If the absolute value of a Z-score is greater than 3, the reading is considered an outlier. This is based on the statistical rule of thumb that most (99.7%) data points should fall within three standard deviations from the mean in a normal distribution.
+
+2. **Handling Outliers with Median Filtering**: When an outlier is detected, our modal replaces it with the median of the last 10 readings. The median is a robust measure of central tendency, which is less affected by outliers compared to the mean. Therefore, replacing the outlier with the median helps maintain the integrity of the data.
+
+3. **Application in Data Processing**:
+   - Temperature Data: If a temperature reading is identified as an outlier, it's replaced with the median of the previous 10 temperature readings.
+   - Pressure Data: Similarly, if a pressure reading is an outlier, it's replaced with the median of the previous 10 pressure readings.
+
+4. **Updating the Data Lists**: After handling outliers, the filtered (cleaned) data points are appended to their respective data lists (`temperature_data` and `pressure_data`). 
+
+This median filtering process helps in maintaining a more accurate and reliable data stream by mitigating the impact of anomalous readings that might skew the analysis or predictions.
+
+
+</details>
+---
+
+---
+<details>
+
 <summary> Linear Regression Model  </summary>
  
 
