@@ -139,20 +139,20 @@ if all nodes have global ipv6 propagated from the border router, you can start t
 execute the setup.sh script to do it automatically for you.
 
 ```ruby
-   chmod +x setup.sh
-   ./setup.sh
+   root@node-a8-1:~#chmod +x setup.sh
+   root@node-a8-1:~#./setup.sh
 ```
 now start the mqttsn-broker.
 
 ```ruby
-   chmod +x setup_Broker.sh
-   ./setup_Broker.sh
+   root@node-a8-1:~#chmod +x setup_Broker.sh
+   root@node-a8-1:~#./setup_Broker.sh
 ```
 open another terminal and start the DEP station.
 
 ```ruby
-  cd DEP
-  python3 main.py
+  root@node-a8-1:~#cd DEP
+  root@node-a8-1:~#python3 main.py
 ```
 
 </details>
