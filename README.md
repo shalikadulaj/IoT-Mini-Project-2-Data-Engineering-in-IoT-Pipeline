@@ -337,7 +337,7 @@ Replace the topic with your topic. Now you can see the data is receiving as belo
 
 </div>
 <details>
-<summary> policy </summary> 
+<summary> Policy </summary> 
 	
 	{
 	"policy": {
