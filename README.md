@@ -336,6 +336,52 @@ Replace the topic with your topic. Now you can see the data is receiving as belo
 
 
 </div>
+<details>
+<summary> policy </summary> 
+	
+	{
+	"policy": {
+	"purpose": "The purpose of this policy is to establish guidelines for the secure and efficient handling of sensor data from remote IoT devices, including temperature and pressure readings. This data will be processed using Lambda functions, stored in DynamoDB, and visualized through Grafana.",
+	"dataCollectionAndTransmission": {
+	"instructions": "All IoT devices must securely transmit temperature and pressure data to the designated AWS Lambda endpoint using encrypted communication to ensure data integrity and confidentiality."
+	},
+	"lambdaFunctionDataProcessing": {
+	"configuration": "Implement AWS Lambda functions for processing incoming sensor data before storage in DynamoDB. This includes data validation, transformation, and any necessary enrichment.",
+	"security": "Ensure that Lambda function execution roles have the least privilege necessary, and regularly review and update permissions based on the principle of least privilege."
+	},
+	"dataStorageInDynamoDB": {
+	"database": "Utilize Amazon DynamoDB as the primary database for storing processed IoT sensor data.",
+	"tableAndSchema": "Define appropriate tables and schema within DynamoDB to efficiently store and retrieve temperature and pressure readings."
+	},
+	"dataVisualizationUsingGrafana": {
+	"platform": "Grafana will be the designated platform for visualizing IoT sensor data.",
+	"configuration": "Configure Grafana dashboards to display real-time and historical temperature and pressure readings.",
+	"accessControl": "Access to Grafana should be restricted to authorized personnel only."
+	},
+	"securityMeasures": {
+	"accessControls": "Implement access controls to restrict unauthorized access to AWS Lambda functions, DynamoDB, and Grafana.",
+	"encryption": "Utilize encryption for data in transit and at rest, both between IoT devices and Lambda functions, as well as between Lambda functions and DynamoDB."
+	},
+	"complianceWithPrivacyRegulations": {
+	"regulations": "Ensure that the collection, storage, and visualization of sensor data comply with relevant privacy laws and regulations.",
+	"consents": "Obtain necessary consents or permissions for data collection as required by applicable regulations."
+	},
+	"monitoringAndAlerts": {
+	"monitoring": "Implement monitoring solutions to detect abnormal patterns or potential security incidents in Lambda functions, DynamoDB, and Grafana.",
+	"alerts": "Set up alerts to notify relevant personnel in case of system anomalies or failures."
+	},
+	"documentationAndTraining": {
+	"documentation": "Maintain comprehensive documentation for the configuration and setup of Lambda functions, DynamoDB, and Grafana."
+	},
+	"policyReview": "This policy will be reviewed annually and updated as necessary to align with changes in technology, regulations, or organizational requirements.",
+	"acknowledgment": "I acknowledge that I have read and understood the IoT Sensor Data Management Policy. I agree to comply with all the stipulated rules and guidelines.",
+	"approval": "[Shalika, Kavinda] [2023/12/31]"
+	}
+	}
+
+
+
+</details>
 </details>
 
 </details>
