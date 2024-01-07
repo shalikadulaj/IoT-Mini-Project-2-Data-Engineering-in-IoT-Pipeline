@@ -1,3 +1,25 @@
+#*
+# * Copyright (C) 2023 University of Oulu - IOT
+# *
+# * This file is subject to the terms and conditions of the GNU Lesser
+# * General Public License v2.1. See the file LICENSE in the top-level
+# * directory for more details.
+# */
+
+#/**
+# * @ingroup     Sensing_Layer
+# * @{
+# *
+# * @file
+# * @brief       Firmware Development to Read Weather Data using RIOT
+# *
+# * @author      Kavinda Rathnayake ( kavindamadhujith@gmail.com)
+# * 
+# *
+# * @}
+#
+
+
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import MQTTSNclient
 import json
