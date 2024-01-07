@@ -7,7 +7,7 @@
 # */
 
 #/**
-# * @ingroup     Sensing_Layer
+# * @ingroup     Data Processing
 # * @{
 # *
 # * @file
