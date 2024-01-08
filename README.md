@@ -251,6 +251,10 @@ open another terminal and start the DEP station.
 ```
 if everything is working you should see a similar screen like below.
 
+**** Please Note that we already have included forecasting using linear Regression "main_lR.py". you may need to download and install "sci-kit learn" before running the code in A8 Board.  
+
+
+
 
 ![Screenshot 2023-12-31 at 12 21 03](https://github.com/shalikadulaj/IoT-Mini-Project-2-Data-Engineering-in-IoT-Pipeline/assets/153508129/51f4aeb1-3a3b-4671-9820-5170c57f1925)
 
